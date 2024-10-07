@@ -1,4 +1,4 @@
-require("Math");
+requires("Math");
 
 
 console.log("Hello World");
