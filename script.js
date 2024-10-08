@@ -1,6 +1,3 @@
-requires("Math");
-
-
 console.log("Hello World");
 function getComputerChoice() {
 	let a;
@@ -27,5 +24,18 @@ function play(playerChoice, computerChoice) {
 	game[("Scissors", "Scissors")] = "It's a draw!";
 	return game[(playerChoice, computerChoice)];
 }
-var playerChoice = prompt("What is your choice?");
-console.log(play(playerChoice, getComputerChoice));
+var playerCh;
+var rock = document.getElementById("rock");
+var paper = document.getElementById("paper");
+var scissors = document.getElementById("scissors");
+var text = document.getElementById("display");
+rock.onclick = function() {
+	text.innerHTML = play("rock", getComputerChoice());
+}
+paper.onclick = function() {
+	text.innerHTML = play("paper", getComputerChoice());
+}
+scissors.onclick = function() {
+	text.innerHTML = play("scissors", getComputerChoice());
+}
+console.log(play(playerCh, getComputerChoice()));
